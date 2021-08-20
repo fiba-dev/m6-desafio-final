@@ -1,0 +1,30 @@
+{
+  "name": "m6-desafio-final",
+  "version": "1.0.0",
+  "description": "",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:front": "parcel build ./client/index.html ",
+    "build:api": "tsc ./server/index.ts ",
+    "dev:front": "parcel serve ./client/index.html",
+    "dev:api": "nodemon --watch ./server/index.ts --exec ts-node ./server/index.ts",
+    "build": "npm run build:front && npm run build:api",
+    "start": " node ./server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase": "^8.10.0",
+    "firebase-admin": "^9.11.1",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.1.25",
+    "nodemon": "^2.0.12",
+    "parcel": "^2.0.0-rc.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0"
+  }
+}
