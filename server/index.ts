@@ -154,9 +154,9 @@ app.post("/rooms/:rtdbRoomId", (req, res) => {
     }
   });
 }),
-  // app.get("*", (req, res) => {
-  //   res.sendFile(__dirname + "./dist/index.html");
-  // });
+  app.get("*", (req, res) => {
+    res.sendFile(__dirname + "/dist/index.html");
+  });
   app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
   });
