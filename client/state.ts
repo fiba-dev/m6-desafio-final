@@ -18,15 +18,6 @@ const state = {
     rtdbRoomId: "",
     history: [],
   },
-  // init para cuando inicia tome los datos del localstorage
-  // init() {
-  //   const currentGame = this.getState();
-
-  //   const localData = localStorage.getItem("saved-state");
-
-  //   if (JSON.parse(localData) != null)
-  //     currentGame.history = JSON.parse(localData);
-  // },
 
   //setRoom , crea un room y devuelve el roomId
   createRoom(callback) {
@@ -160,14 +151,7 @@ const state = {
 
     this.updateState();
   },
-  //pushHistory donde guarda la history actual en el localStorage
-  // pushHistory(userPlay: choose, guestPlay: choose) {
-  //   const currentState = this.getState();
 
-  //   currentState.history.push({ userPlay, guestPlay });
-  //   localStorage.setItem("saved-state", JSON.stringify(currentState.history));
-  // },
-  //Whowins dependiendo de la jugada del player y la maquina interpreta quien gano retornano "perdiste", "ganaste","empataste"
   whoWins(userPlay: choose, guestPlay: choose) {
     if (userPlay == "papel") {
       if (guestPlay == "papel") return "empataste";
@@ -241,8 +225,6 @@ const state = {
   },
   setState(newState) {
     this.data = newState;
-
-    localStorage.setItem("state", JSON.stringify(newState));
   },
 };
 
